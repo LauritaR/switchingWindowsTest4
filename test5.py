@@ -8,7 +8,7 @@ from selenium.common.exceptions import NoSuchElementException
 # class
 # module
 # session
-@pytest.fixture(scope='function', autouse=True)
+@pytest.fixture(scope='session', autouse=True)
 def setup_and_teardown():
     service = Service('chromedriver.exe')
     driver = webdriver.Chrome(service=service)
